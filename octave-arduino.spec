@@ -7,7 +7,7 @@ Release:	1
 Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://octave.sourceforge.io/%{octpkg}/
+Url:		https://packages.octave.org/%{octpkg}/
 BuildArch:	noarch
 
 BuildRequires:	octave-devel > 4.0.0
@@ -20,10 +20,8 @@ Requires(post): octave
 Requires(postun): octave
 
 %description
- Basic Octave implementation of the matlab arduino extension, allowing
+Basic Octave implementation of the matlab arduino extension, allowing
 communication to a programmed arduino board to control its hardware.
-
-This package is part of community Octave-Forge collection.
 
 %files
 %license COPYING
