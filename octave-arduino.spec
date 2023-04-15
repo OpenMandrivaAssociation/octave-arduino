@@ -1,23 +1,25 @@
 %global octpkg arduino
 
 Summary:	Octave Arduino Toolkit
-Name:		octave-%{octpkg}
+Name:		octave-arduino
 Version:	0.10.0
 Release:	1
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://packages.octave.org/%{octpkg}/
-BuildArch:	noarch
+Url:		https://packages.octave.org/arduino/
+Source0:	https://downloads.sourceforge.net/octave/arduino-%{version}.tar.gz
 
-BuildRequires:	octave-devel > 4.0.0
-BuildRequires:	octave-instrument-control
+BuildRequires:  octave-devel >= 4.0.0
+BuildRequires:  octave-instrument-control >= 0.5.0
 
-Requires:	octave(api) = %{octave_api}
 Requires:	arduino
+Requires:	octave(api) = %{octave_api}
+Requires:  	octave-instrument-control >= 0.5.0
 
 Requires(post): octave
 Requires(postun): octave
+
+BuildArch:	noarch
 
 %description
 Basic Octave implementation of the matlab arduino extension, allowing
@@ -33,11 +35,9 @@ communication to a programmed arduino board to control its hardware.
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -n %{octpkg}-%{version}
+%autosetup -p1 -n %{octpkg}-%{version}
 
 %build
-export LIBS="-L%{_libdir}"
-%set_build_flags
 %octave_pkg_build
 
 %install
