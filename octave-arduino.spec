@@ -2,8 +2,8 @@
 
 Summary:	Octave Arduino Toolkit
 Name:		octave-arduino
-Version:	0.10.0
-Release:	2
+Version:	0.12.1
+Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/arduino/
