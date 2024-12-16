@@ -7,7 +7,7 @@ Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/arduino/
-Source0:	https://downloads.sourceforge.net/octave/arduino-%{version}.tar.gz
+Source0:	https://github.com/gnu-octave/octave-%{octpkg}/releases/download/release-%{version}/%{octpkg}-%{version}.tar.gz
 
 BuildRequires:  octave-devel >= 4.0.0
 BuildRequires:  octave-instrument-control >= 0.5.0
